@@ -31,7 +31,7 @@ export default function Register({ setView }) {
       const response = await API.post('/auth/signup', {
         username: form.username,
         email: form.email,
-        mobile: form.mobile,
+        // mobile: form.mobile,
         password: form.password,
         role: 'user'
       });
