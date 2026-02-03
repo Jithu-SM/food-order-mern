@@ -12,7 +12,7 @@ export default function Menu({ restaurantId, onBack }) {
     const fetchFoods = async () => {
       try {
         setLoading(true);
-        const response = await API.get(`/foods?restaurantId=${restaurantId}`);
+        const response = await API.get(`/foods/restaurant/${restaurantId}`);
         setFoods(response.data);
       } catch (err) {
         console.error('Failed to fetch foods:', err);
